@@ -1,6 +1,20 @@
-@Restaurants.API_HostAddress = http://localhost:5272
+@host = https://localhost
+@port = 7005
+
+@Restaurants.API_HostAddress = {{host}}:{{port}}
 
 GET {{Restaurants.API_HostAddress}}/api/weatherforecast/example
 Accept: application/json
+ProjectUrl: {{$projectUrl}}
+Guid: {{$guid}}
+LocalDate: {{$datetime iso8601}} 
+Random-int: {{$randomInt}} 
 
 ###
+
+POST {{Restaurants.API_HostAddress}}/api/weatherforecast
+Content-Type: application/json
+
+{
+    "email": "test@tes.com"
+}
