@@ -1,7 +1,7 @@
 @host = https://localhost
 @port = 7005
 
-@Restaurants.API_HostAddress = {{host}}:{{port}}
+@Restaurants.API_HostAddress = https://localhost:7005
 
 GET {{Restaurants.API_HostAddress}}/api/weatherforecast/23/currentDay?max=11
 Accept: application/json
@@ -12,7 +12,13 @@ Random-int: {{$randomInt}}
 
 ###
 
-POST {{Restaurants.API_HostAddress}}/api/weatherforecast
+
+POST {{Restaurants.API_HostAddress}}/api/weatherforecast/generate?count=5
 Content-Type: application/json
 
-"Jakub"
+{
+  "min": 25,
+  "max": 23
+}
+
+###
