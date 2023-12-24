@@ -15,6 +15,4 @@ Random-int: {{$randomInt}}
 POST {{Restaurants.API_HostAddress}}/api/weatherforecast
 Content-Type: application/json
 
-{
-    "email": "test@tes.com"
-}
+"Jakub"

@@ -23,4 +23,18 @@ public class WeatherForecastController : ControllerBase
         var result = _weatherForecastService.Get();
         return result;
     }
+
+    [HttpGet]
+    [Route("{take}/currentDay")]
+    public WeatherForecast Get([FromQuery]int max, [FromRoute]int take)
+    {
+        var result = _weatherForecastService.Get().First();
+        return result;
+    }
+
+    [HttpPost]
+    public string Hello([FromBody] string name)
+    {
+        return $"Hello {name}";
+    }
 }
