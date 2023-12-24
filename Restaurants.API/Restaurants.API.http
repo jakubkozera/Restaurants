@@ -3,7 +3,7 @@
 
 @Restaurants.API_HostAddress = {{host}}:{{port}}
 
-GET {{Restaurants.API_HostAddress}}/api/weatherforecast/example
+GET {{Restaurants.API_HostAddress}}/api/weatherforecast/23/currentDay?max=11
 Accept: application/json
 ProjectUrl: {{$projectUrl}}
 Guid: {{$guid}}

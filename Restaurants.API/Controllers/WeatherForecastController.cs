@@ -26,10 +26,13 @@ public class WeatherForecastController : ControllerBase
 
     [HttpGet]
     [Route("{take}/currentDay")]
-    public WeatherForecast Get([FromQuery]int max, [FromRoute]int take)
+    public IActionResult Get([FromQuery]int max, [FromRoute]int take)
     {
         var result = _weatherForecastService.Get().First();
-        return result;
+
+        //Response.StatusCode = 400;
+        //  return StatusCode(400, result);
+        return NotFound(result);
     }
 
     [HttpPost]
