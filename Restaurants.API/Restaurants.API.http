@@ -16,15 +16,15 @@ POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-  "Name": "Spicy Delights",
-  "Description": "A culinary experience like no other",
-  "Category": "Fine Dining",
+  "Name": "Tasty Bites",
+  "Description": "A cozy restaurant serving a variety of delicious dishes.",
+  "Category": "International Cuisine",
   "HasDelivery": true,
-  "ContactEmail": "info@gourmetdelights.com",
-  "ContactNumber": "555-123-4567",
-  "City": "Metropolis",
-  "Street": "456 Gourmet Avenue",
-  "PostalCode": "54321"
+  "ContactEmail": "info@tastybites.com",
+  "ContactNumber": "555-1234",
+  "City": "New York",
+  "Street": "123 Main Street",
+  "PostalCode": "10-001"
 }
 
 ###
