@@ -16,15 +16,15 @@ POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-  "Name": "Tasty Bites",
-  "Description": "A cozy restaurant serving a variety of delicious dishes.",
-  "Category": "International Cuisine",
-  "HasDelivery": true,
-  "ContactEmail": "info@tastybites.com",
-  "ContactNumber": "555-1234",
-  "City": "New York",
-  "Street": "123 Main Street",
-  "PostalCode": "10-001"
+      "Name": "Tasty Bites",
+      "Description": "A cozy restaurant serving a variety of delicious dishes.",
+      "Category": "Indian",
+      "HasDelivery": true,
+      "ContactEmail": "info@test.com",
+      "ContactNumber": "555-1234",
+      "City": "New York",
+      "Street": "123 Main Street",
+      "PostalCode": "10-010"
 }
 
 ###
