@@ -8,7 +8,7 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants/1
+GET {{Restaurants.API_HostAddress}}/api/restaurants/145
 
 ###
 
@@ -16,7 +16,7 @@ POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-      "Name": "Tasty Bites",
+      "Name": "Tasty Tests",
       "Description": "A cozy restaurant serving a variety of delicious dishes.",
       "Category": "Indian",
       "HasDelivery": true,
