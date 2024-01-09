@@ -10,6 +10,12 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 GET {{Restaurants.API_HostAddress}}/api/restaurants/145
 
+
+###
+
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/1006
+
+
 ###
 
 POST {{Restaurants.API_HostAddress}}/api/restaurants
