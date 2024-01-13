@@ -22,7 +22,7 @@ POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-      "Name": "Tasty Tests",
+      "Name": "Tasty Tests2",
       "Description": "A cozy restaurant serving a variety of delicious dishes.",
       "Category": "Indian",
       "HasDelivery": true,
@@ -41,13 +41,13 @@ GET https://localhost:7005/api/restaurants/1007
 ###
 
 
-PATCH {{Restaurants.API_HostAddress}}/api/restaurants/1007
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/1010
 Content-Type: application/json
 
 {
-  "Name": "Sample patch",
+  "Name": "Sample patch2",
   "Description": "This is a sample restaurant description.",
-  "HasDelivery": true
+  "HasDelivery": false
 }
 
 ###
