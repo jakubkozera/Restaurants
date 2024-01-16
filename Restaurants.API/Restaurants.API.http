@@ -8,7 +8,7 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants/145
+GET {{Restaurants.API_HostAddress}}/api/restaurants/3
 
 
 ###
@@ -48,6 +48,18 @@ Content-Type: application/json
   "Name": "Sample patch2",
   "Description": "This is a sample restaurant description.",
   "HasDelivery": false
+}
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/restaurants/31/dishes
+Content-Type: application/json
+
+{
+  "Name": "Spaghetti Bolognese",
+  "Description": "Classic Italian pasta dish with rich meat sauce",
+  "Price": 12.99,
+  "KiloCalories": 750
 }
 
 ###
