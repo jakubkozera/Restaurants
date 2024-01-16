@@ -16,7 +16,7 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants/3/dishes
 
 ###
 
-DELETE {{Restaurants.API_HostAddress}}/api/restaurants/343/dishes
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/3/dishes
 
 ###
 
@@ -64,7 +64,7 @@ Content-Type: application/json
 
 ###
 
-POST {{Restaurants.API_HostAddress}}/api/restaurants/31/dishes
+POST {{Restaurants.API_HostAddress}}/api/restaurants/3/dishes
 Content-Type: application/json
 
 {
@@ -75,3 +75,5 @@ Content-Type: application/json
 }
 
 ###
+
+GET https://localhost:7005/api/restaurants/3/dishes/7

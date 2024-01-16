@@ -17,8 +17,8 @@ public class DishesController(IMediator mediator) : ControllerBase
     {
         command.RestaurantId = restaurantId;
 
-        await mediator.Send(command);
-        return Created();
+        var dishId = await mediator.Send(command);
+        return CreatedAtAction(nameof(GetByIdForRestaurant), new { restaurantId, dishId }, null);
     }
 
     [HttpGet]
