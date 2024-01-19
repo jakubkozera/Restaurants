@@ -5,6 +5,7 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Formatting.Compact;
 using Restaurants.API.Middlewares;
+using Restaurants.Domain.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,6 +43,8 @@ if (app.Environment.IsDevelopment())
 
 
 app.UseHttpsRedirection();
+
+app.MapIdentityApi<User>();
 
 app.UseAuthorization();
 
