@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 
-namespace Restaurants.Application.User
+namespace Restaurants.Application.Users
 {
     public interface IUserContext
     {

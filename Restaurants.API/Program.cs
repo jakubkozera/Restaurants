@@ -1,10 +1,10 @@
+using Restaurants.API.Extensions;
+using Restaurants.API.Middlewares;
+using Restaurants.Application.Extensions;
+using Restaurants.Domain.Entities;
 using Restaurants.Infrastructure.Extensions;
 using Restaurants.Infrastructure.Seeders;
-using Restaurants.Application.Extensions;
 using Serilog;
-using Restaurants.API.Middlewares;
-using Restaurants.Domain.Entities;
-using Restaurants.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,7 +37,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGroup("api/identity").MapIdentityApi<User>();
+app.MapGroup("api/identity")
+    .WithTags("Identity")
+    .MapIdentityApi<User>();
 
 app.UseAuthorization();
 
