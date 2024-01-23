@@ -1,6 +1,6 @@
 @host = https://localhost
 @port = 7005
-@token = CfDJ8AHCTjzdeFVOpyQbYbe9sOKymt1rGYMExdfd0Mqj5xqu9_818aAYteGTKzfSNAl9zbsdWZfVKdbaCnhA_3QsnM8XolDgWfq_eb8KS83kLThIqzQsM98g8nMGMReRbSuUMwdRiFa0uUbOKKhmjuBha44sZWfKzJnJGW8UaSLr3-VMwxYhF3fufi4S7eU7VuTiD_BrEEwv8Bxv4FtvrXzhKXa-LbmtwmhY_eeyu6lJ7xCunBpADGVPKCtWzR-1CBag3RYX5QbIlCHHv4wUA6ZNehzqh16ypScdNQJXnn_iLM9r4ufxPAJICGFbKs36Bc7aFVm8k53BBI9K3a5LeZsRbHxnqgLGVC5LMyuIKZ6gtTbO6GqPe_gnIDesGYNnoFDQII_AlXBGjydNGCuRP5gKp_ubb3oQ7msqRs-ctmxwiGJd9lQ81k0UG3XIIS9Z5QSAZU37TQgTvzon-wrdXKQBkjRKxAgK70WVzVFdxArAl-VH9TY3H8gkFJyJa1f86hZTgRg-q1RAPME1uOBMJH-SAo6pSnELVGS0DcX3zLPA42qJBJhmJZkt4gEn-OcFzwfHMPBk1jlotP2KwrsYhj_Gl4lRGGVPYGIDZKKjUUrbOtxyhDff72unWUTkWwkixmJTZ1Vs0njH-_ISuPTM3e-ogEpsx7wXguQAw_VkMiP74Mx1aDByWoQLMLOEH6I7ik69cQ
+@token = CfDJ8AHCTjzdeFVOpyQbYbe9sOIRToAqGGIv6r7R30qDQr77x_z1gxjcAdtiDjSbY0iovEH9b2cS2LpnBppfGXFDF17gF5Y8cnrkD7LWXkLhpHyjpWG9Lp_blmeK5TeljAWnfYGO_Ik7lxWf-v2W-APC4FXwsbANBWO2jgclXdQ224n0aQ5_SWmv-PFMLEYKa_PeMmB16qHEhgpnANm7jU4XUg4-IGcV9MDL3Ah9jQmDRugOuzHXmzpy3QDmy8sXjR1zjZ6QJK4HsTlyh44TeFbSTRwWpOEZYsSNrCY8JtFxiJJkNM1kTnOf4jleOZSO0HVIzn06_YMsthb25D83h4Eo9tG9DBHDGk1TpLOrR1iVSny2uNXnfOfr19sFOyNJFxeBHHpsJlARpwo06O9qtUjlbZ5xxi8JJR-h7OwcsmO7i6qhgJfoOGks81rdWyLBKBIX2sZdJL708NyQTYSI2OL7T49DLP1_r1ycxk4ob-2GpeWTamq0CTWnP8jAQeFPcJCXVXYi3dAYfpBQtUO2rjm4HX5xfYYVrsYnDMcudVk0Ur5TW49J0JaRW0xinYCIiZ9ShBOJ8kVTwka5E7u-26haW3ubHzfM0T-HE-DGDHsxy7NzjzXpBiY79_WWr9rap3GjaO2TjKx3m16ZnuTwgdmDBWWnSZAqH_4W-_ScZwKYP_mUSU2TwDtGb4wGYV91jQ-4SaugOLXIqod046Ejqgz04DVOWrvtqLsT0D140EAYqbFEdAIvwY858urIu4WAXfyhJ_5McjKomJmJdP5CkZRf2guiQWMMYfz5SNl9iQMOgiU2
 
 @Restaurants.API_HostAddress = https://localhost:7005
 
@@ -34,10 +34,11 @@ DELETE {{Restaurants.API_HostAddress}}/api/restaurants/1006
 ###
 
 POST {{Restaurants.API_HostAddress}}/api/restaurants
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-      "Name": "Tasty Tests2",
+      "Name": "Tasty Tests3",
       "Description": "A cozy restaurant serving a variety of delicious dishes.",
       "Category": "Indian",
       "HasDelivery": true,
@@ -89,7 +90,7 @@ POST {{Restaurants.API_HostAddress}}/api/identity/register
 Content-Type: application/json
 
 {
-    "email": "testuser@test.com",
+    "email": "user@test.com",
     "password": "Password1!"
 }
 
@@ -99,6 +100,6 @@ POST {{Restaurants.API_HostAddress}}/api/identity/login
 Content-Type: application/json
 
 {
-    "email": "testuser@test.com",
+    "email": "owner@test.com",
     "password": "Password1!"
 }
