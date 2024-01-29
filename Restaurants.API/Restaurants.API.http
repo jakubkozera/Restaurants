@@ -1,6 +1,6 @@
 @host = https://localhost
 @port = 7005
-@token = CfDJ8AHCTjzdeFVOpyQbYbe9sOL8cq8DzvEyGauMzY-95vQS4B9VAsKXjjVi2kWwrHkuLikhQgfhSgSBsuNsnTDmLXt549V-4x4LFLaMc4Xdsa3nnECNLYO_vwml5-51qw3x8mwDBTyMQrFm4wbiPZQOqJ8lqnY_CzkYpiwjcLtXLMCLubGXC-lQA_gz_MKOrlNXV-0UJH6_Jk6hPbj4wwgkPXTtiTBN3_JlcLSL-8sZpeLQu4KtDxsuGfQD-NDcCWpH3tDyeUDQU4EVu9aVKnHdwb3kXQ7Sl5Y3EGGYK6ATP-CwwH56KhxsN5ATACaKZZOhbIGqALTXM2owY7KEAKacahkUjAiKr9g2tGN5_x4IxGppunaI_9cDEquLAjhPH_HQM-xvRBkEssncaQflzqkNsM1DbH0NCe7WVIUYEhid4HOASDlWQNn7GH9U57BPORSkiPQTx6o1FWyaMxFF3M96DmeesI7uOrxP771gZcewm1BCsxumxpta28yMJ-XeWcLhf3DlrRCPhkBtj97iq4tQOZlyBu0R_deYzBjaoMWdvmOLGHzj8nOIOmpMNj_qTdEB5JQnxo5COWTc4hS9i9ljIyZf7yuSn1rj63Lzcti7X4WbEPcsKOcN8sxUCz-2_HSnYTF67pkDLCLr-5IUY9e0dVtklseppNj5uuxaj5UM_KTRt6X3KmkvMJehUuRC9y-FalCFkV5hkuYZtQr7gL8fhdj1h_UuxaD95M8yl7dvcg404ynXe5JJ1A_ItKSkulrumGgfQ44UssjfCtll1G20Jfc_ROdOm8i0f5hYBUBiMcqN
+@token = CfDJ8AHCTjzdeFVOpyQbYbe9sOIx73fFloH0DAGkNrrNM6qMS9tPg5KH5kr93eYl848F0GulE3IP6WFeX7IaXN9ipUxPychP87n7DR3L3Bij9G_8dfExXDPQgM9Tk0UT_7tYf_u_TiJpJhWEazQ-iJ0gv9FSFx9EE3cLlPRuLX-3L1y2r7Fldrv61zjWh0BTkDX4tiUkwbkNG-O2XeHzyeVdtgb6LTv8DzBHCiPLSWrVQbRcyZcttpwV7E_vNE82vSsMmuIdLg6cHPmTV3BLaNbjgP1sQWyqm8wgjvbmR4fF3_EFZCuQWCBlkOxLAVHXbukGyJrwgdVPEOGLTU1pScUh7Q10Ha0WFGrZUa-2ZHjv6RK9i4eSvQAacTk1l0rpCuUH5GC5N7PxgigKZOq8M2bf8dX10x4ljbAZmxC9YYC55oszv6ldOkqq2hkq7tgkpBFPXbwP8_Jfy9xG1AAHQD2si1vh81ZyVLCOTXnq8icGfoKettIcYBgwIoeEVFOSn4dIB0-tNwRXm3-koljy98nfO57rgBJ-baHZZqEWxDwTxFL2nTO54Vng8qNJDdObyhyNqAmZ5eFzpAzylt4vtVEcsnJagW_0WJUFPmTfITJh-WHGI9Su-WvTnPUgLc_AQ4JVh35OkNXm_ue9ESuTWuuAGo1aBWKLM9vAzkQsTsn-XfLfPLPdgShmBePruB_rF7V2jN8kBGqjFjqR1GgTN7hSXfyCofWhf87LGpK99lG3Z7bf7SHrJy7JdmaFSoeFbgKWgOhPY9gglMuqbKzOjYuf5iEovgBgTqV78ZQ5A16ftpYsFNbIeawPw-UZMOnQXvnjPiP6EKZxw69CmwoV8QFK-YHAbZ9uDWl0qb7NYjvNc9-gjQXiIaL3B1Whgk-QlZNsAA
 
 @Restaurants.API_HostAddress = https://localhost:7005
 
@@ -39,7 +39,7 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-      "Name": "Tasty Tests3",
+      "Name": "Owner restaurant",
       "Description": "A cozy restaurant serving a variety of delicious dishes.",
       "Category": "Indian",
       "HasDelivery": true,
@@ -101,7 +101,7 @@ POST {{Restaurants.API_HostAddress}}/api/identity/login
 Content-Type: application/json
 
 {
-    "email": "admin@test.com",
+    "email": "owner@test.com",
     "password": "Password1!"
 }
 ###
