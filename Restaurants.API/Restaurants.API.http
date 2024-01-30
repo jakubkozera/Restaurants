@@ -1,6 +1,6 @@
 @host = https://localhost
 @port = 7005
-@token = CfDJ8AHCTjzdeFVOpyQbYbe9sOIx73fFloH0DAGkNrrNM6qMS9tPg5KH5kr93eYl848F0GulE3IP6WFeX7IaXN9ipUxPychP87n7DR3L3Bij9G_8dfExXDPQgM9Tk0UT_7tYf_u_TiJpJhWEazQ-iJ0gv9FSFx9EE3cLlPRuLX-3L1y2r7Fldrv61zjWh0BTkDX4tiUkwbkNG-O2XeHzyeVdtgb6LTv8DzBHCiPLSWrVQbRcyZcttpwV7E_vNE82vSsMmuIdLg6cHPmTV3BLaNbjgP1sQWyqm8wgjvbmR4fF3_EFZCuQWCBlkOxLAVHXbukGyJrwgdVPEOGLTU1pScUh7Q10Ha0WFGrZUa-2ZHjv6RK9i4eSvQAacTk1l0rpCuUH5GC5N7PxgigKZOq8M2bf8dX10x4ljbAZmxC9YYC55oszv6ldOkqq2hkq7tgkpBFPXbwP8_Jfy9xG1AAHQD2si1vh81ZyVLCOTXnq8icGfoKettIcYBgwIoeEVFOSn4dIB0-tNwRXm3-koljy98nfO57rgBJ-baHZZqEWxDwTxFL2nTO54Vng8qNJDdObyhyNqAmZ5eFzpAzylt4vtVEcsnJagW_0WJUFPmTfITJh-WHGI9Su-WvTnPUgLc_AQ4JVh35OkNXm_ue9ESuTWuuAGo1aBWKLM9vAzkQsTsn-XfLfPLPdgShmBePruB_rF7V2jN8kBGqjFjqR1GgTN7hSXfyCofWhf87LGpK99lG3Z7bf7SHrJy7JdmaFSoeFbgKWgOhPY9gglMuqbKzOjYuf5iEovgBgTqV78ZQ5A16ftpYsFNbIeawPw-UZMOnQXvnjPiP6EKZxw69CmwoV8QFK-YHAbZ9uDWl0qb7NYjvNc9-gjQXiIaL3B1Whgk-QlZNsAA
+@token = CfDJ8AHCTjzdeFVOpyQbYbe9sOLUgdni8s-qL7j8ukh29Q3xPjuzm-WXMNyW82pJ8H4ASJEEqjiVWEQZLe3eY4cEXgq0PUEy-T2FVbzQ2WlVarNJ126I6lK5sY-NW5Ls4BeW6s2XC1h1wnGnLZjuQrS3c4cjodmyD-4WfMY8y6zS9x0L6R1LDiiptL5C8FfA7XFlS-YjhLze3rHIyjnAFd479lNL61hOlTHEdme9Q72hrJCjAAea7sTGFY_5ZNA07fJ6bX3v2pj4Fub0HqMktOAkIPtCKXdnSMJk1UEd1FgLI4I2msA6am5ouC_HjkvRF3VqcMMBUM62wFDLIXrjr1ncvn8W77HK8OjGaa2cgRFc-I2xhwiLMlPgP4RqmsfKZHwJFbtdtmQtHh3LK1O-uk4zm0pCmemfHX4MaETibMmTIt6Hp_o8gFjnGAUN03qosNtQ7GgGLOu2qG63XwqjLJTiBHNrPmHobqMznyO6TGl5vwRGfdThK8Kmy9FZbKDHePo73ek2eS1VyAhOfI5ODokMq4ru0ds-EmXXMb_VKg0Urovb3vPbVDywtYoN9at67W7htfVjrWO6kYrNGp3cJ9qDL-YFZ02tZnE3SkLCUVIFDKpT_yWAw_e7oGXG0lH5vrXWsRsoK8gzr7CHzBwuKxz3sgiJX21YWXo6y-9KKUzKwfFgt1xnMOi1zLkfqHfTmIVAb83U_PD3ONLcoZg6VOJO_zCHtt2I6llHAccBOrs_ls0B4ZGQIkhglPcW3vqIp5xpwb3cQ_AissvGEAzhGQECKHk84LOJ2QkcUEyCr5MLOG2HqffY5_JNi_J1_PzTj_fnElYU8CLrsuJGFmKA172U9p-lon2UspAX4eamkShMy7ULfBK2X8uTBKifgQBT0LnQ1Q
 
 @Restaurants.API_HostAddress = https://localhost:7005
 
@@ -29,7 +29,8 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants/3/dishes/3
 
 ###
 
-DELETE {{Restaurants.API_HostAddress}}/api/restaurants/1006
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/1009
+Authorization: Bearer {{token}}
 
 
 ###
@@ -52,17 +53,19 @@ Content-Type: application/json
 
 ###
 
-GET https://localhost:7005/api/restaurants/1007
+GET https://localhost:7005/api/restaurants/1009
+Authorization: Bearer {{token}}
 
 
 ###
 
 
-PATCH {{Restaurants.API_HostAddress}}/api/restaurants/1010
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/1009
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-  "Name": "Sample patch2",
+  "Name": "Updated name",
   "Description": "This is a sample restaurant description.",
   "HasDelivery": false
 }
