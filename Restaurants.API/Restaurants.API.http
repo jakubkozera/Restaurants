@@ -5,7 +5,7 @@
 @Restaurants.API_HostAddress = https://localhost:7005
 
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants
+GET {{Restaurants.API_HostAddress}}/api/restaurants?searchPhrase=kfc
 Authorization: Bearer {{token}}
 
 ###
