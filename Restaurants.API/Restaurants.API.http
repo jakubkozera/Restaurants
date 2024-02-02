@@ -5,7 +5,7 @@
 @Restaurants.API_HostAddress = https://localhost:7005
 
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants?searchPhrase=kfc
+GET {{Restaurants.API_HostAddress}}/api/restaurants?searchPhrase=wiza&pageSize=10&pageNumber=2
 Authorization: Bearer {{token}}
 
 ###
