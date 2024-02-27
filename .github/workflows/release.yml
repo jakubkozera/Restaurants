@@ -43,6 +43,21 @@ jobs:
           app-name: 'restaurants-api-dev'
           publish-profile:  ${{ secrets.PUBLISH_PROFILE_DEV }}
 
+  deploy-prod:
+    runs-on: ubuntu-latest
+    needs: deploy-dev
+    steps:
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v4.1.3
+        with:
+          name: api-artifact
+      - name: Azure WebApp
+        uses: Azure/webapps-deploy@v3.0.0
+        with:
+          app-name: 'restaurants-api1-prod'
+          publish-profile:  ${{ secrets.PUBLISH_PROFILE_PROD }}
+
+
 
 
 
