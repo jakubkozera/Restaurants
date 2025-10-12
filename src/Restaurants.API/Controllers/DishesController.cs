@@ -15,13 +15,25 @@ namespace Restaurants.API.Controllers;
 [Authorize]
 public class DishesController(IMediator mediator) : ControllerBase
 {
+
     [HttpPost]
-    public async Task<IActionResult> CreateDish([FromRoute]int restaurantId, CreateDishCommand command)
+    public async Task<IActionResult> CreateDish([FromRoute] int restaurantId, CreateDishCommand command)
     {
         command.RestaurantId = restaurantId;
-
         var dishId = await mediator.Send(command);
         return CreatedAtAction(nameof(GetByIdForRestaurant), new { restaurantId, dishId }, null);
+    }
+
+    [HttpPost("bulk")]
+    public async Task<IActionResult> BulkCreateDishes([FromRoute] int restaurantId, [FromBody] List<CreateDishCommand> dishes)
+    {
+        var command = new BulkCreateDishesCommand
+        {
+            RestaurantId = restaurantId,
+            Dishes = dishes
+        };
+        var dishIds = await mediator.Send(command);
+        return Created($"api/restaurants/{restaurantId}/dishes", dishIds);
     }
 
     [HttpGet]
@@ -33,7 +45,7 @@ public class DishesController(IMediator mediator) : ControllerBase
     }
 
     [HttpGet("{dishId}")]
-    public async Task<ActionResult<DishDto>> GetByIdForRestaurant([FromRoute] int restaurantId, [FromRoute]int dishId)
+    public async Task<ActionResult<DishDto>> GetByIdForRestaurant([FromRoute] int restaurantId, [FromRoute] int dishId)
     {
         var dish = await mediator.Send(new GetDishByIdForRestaurantQuery(restaurantId, dishId));
         return Ok(dish);
