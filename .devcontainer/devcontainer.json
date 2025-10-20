@@ -1,0 +1,46 @@
+{
+	"name": "Restaurants API .NET 8",
+	"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-jammy",
+	
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/mssql:1": {}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [5000, 5001, 1433],
+
+	// Container environment variables
+	"containerEnv": {
+		"ConnectionStrings__RestaurantsDb": "Server=localhost,1433;Database=RestaurantsDb;User Id=sa;Password=YourStrong!Passw0rd;"
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"JakubKozera.csharp-dev-tools",
+				"ms-dotnettools.csharp"
+			],
+			"settings": {
+				"dotnet.server.useOmnisharp": false,
+				"dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.organizeImports": "explicit"
+				}
+			}
+		}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "dotnet restore Restaurants.sln && dotnet tool restore && dotnet ef database update --project src/Restaurants.API/Restaurants.API.csproj",
+
+	// Use 'postStartCommand' to run commands after the container starts.
+	"postStartCommand": "dotnet build Restaurants.sln",
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "vscode"
+}
