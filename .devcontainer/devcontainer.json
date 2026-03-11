@@ -1,46 +1,41 @@
 {
-	"name": "Restaurants API .NET 8",
-	"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-jammy",
-	
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/github-cli:1": {},
-		"ghcr.io/devcontainers/features/mssql:1": {}
-	},
+  "name": "Restaurants API .NET 8 + SQL Server",
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [5000, 5001, 1433],
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
 
-	// Container environment variables
-	"containerEnv": {
-		"ConnectionStrings__RestaurantsDb": "Server=localhost,1433;Database=RestaurantsDb;User Id=sa;Password=YourStrong!Passw0rd;"
-	},
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
 
-	// Configure tool-specific properties.
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"JakubKozera.csharp-dev-tools",
-				"ms-dotnettools.csharp"
-			],
-			"settings": {
-				"dotnet.server.useOmnisharp": false,
-				"dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
-				"editor.formatOnSave": true,
-				"editor.codeActionsOnSave": {
-					"source.organizeImports": "explicit"
-				}
-			}
-		}
-	},
+  "forwardPorts": [5000, 5001, 1433],
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "dotnet restore Restaurants.sln && dotnet tool restore && dotnet ef database update --project src/Restaurants.API/Restaurants.API.csproj",
+  "containerEnv": {
+    "ConnectionStrings__RestaurantsDb": "Server=sqlserver,1433;Database=RestaurantsDb;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;"
+  },
 
-	// Use 'postStartCommand' to run commands after the container starts.
-	"postStartCommand": "dotnet build Restaurants.sln",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "JakubKozera.csharp-dev-tools"
+      ],
+      "settings": {
+        "dotnet.server.useOmnisharp": false,
+        "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": "explicit"
+        }
+      }
+    }
+  },
 
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	"remoteUser": "vscode"
+  "postCreateCommand": "dotnet restore Restaurants.sln && dotnet tool restore && dotnet ef database update --project src/Restaurants.API/Restaurants.API.csproj",
+
+  "postStartCommand": "dotnet build Restaurants.sln",
+
+  "remoteUser": "vscode"
 }

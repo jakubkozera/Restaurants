@@ -1,0 +1,10 @@
+{
+    "csharp-dev-tools.entityFramework.migrationPreferences": {
+        "Restaurants.sln": {
+            "startupProject": "src/Restaurants.API/Restaurants.API.csproj",
+            "migrationsProject": "src/Restaurants.Infrastructure/Restaurants.Infrastructure.csproj",
+            "dbContextClass": "RestaurantsDbContext",
+            "migrationsFolder": "Migrations"
+        }
+    }
+}
