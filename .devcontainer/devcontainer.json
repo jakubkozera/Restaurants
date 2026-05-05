@@ -19,7 +19,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-dotnettools.csharp",
         "JakubKozera.csharp-dev-tools"
       ],
       "settings": {
